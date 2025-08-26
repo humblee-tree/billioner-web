@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome to My World</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #000, #333);
+      color: white;
+      overflow-x: hidden;
+    }
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      animation: fadeIn 3s ease-in-out;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: gold;
+    }
+    .slides {
+      display: flex;
+      width: 300%;
+      animation: slideShow 12s infinite;
+    }
+    .slide-container {
+      overflow: hidden;
+      height: 400px;
+    }
+    .slide {
+      flex: 1 0 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      background-size: cover;
+      background-position: center;
+    }
+    @keyframes slideShow {
+      0%, 20% { transform: translateX(0); }
+      30%, 50% { transform: translateX(-100%); }
+      60%, 80% { transform: translateX(-200%); }
+      100% { transform: translateX(0); }
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #111;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <header>
+    <h1>I Am the Billionaire</h1>
+    <p>Dream Big. Build Bigger.</p>
+  </header>
+
+  <div class="slide-container">
+    <div class="slides">
+      <div class="slide" style="background-image: url('images/slide1.jpg');">Luxury Lifestyle</div>
+      <div class="slide" style="background-image: url('images/slide2.jpg');">Business Empire</div>
+      <div class="slide" style="background-image: url('images/slide3.jpg');">Global Vision</div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Your Name. All Rights Reserved.
+  </footer>
+
+</body>
+</html>
